@@ -1,64 +1,91 @@
-/* Default page styles */
-body {
-  font-family: Arial, sans-serif;  /* page font */
-  background-color: #f4f4f9;       /* light gray background */
-  color: #333;                     /* dark text color */
+/* HTML-Lab3-WarrenChanansingh.zip */
+/*
+
+The semantics are good but if you need to add a wrapper div, then do so but keep in mind the structure of the content that you don't modify so much that the content meaning has changed. You may add classes or ids if needed.
+Add default styling for:
+the page font
+heading font
+links (including hover styling)
+Add any other styling to individual elements so that the content looks completely styled (i.e. I don't want to see just three things styled).
+
+Make use of:
+border and border-radius
+color
+font
+background-color
+Use margin and padding to adjust spacing if need be (e.g. to adjust the gap between form components). */
+
+
+body 
+{
+  font-family: 'Times New Roman', Times, serif; /* default styling for page font */
+  background-color: #6b6a6a;       
+  color: #120f0f;                     
   margin: 0;
-  padding: 20px;
+  padding: 25px;
 }
 
-/* Headings */
-h1, h2 {
-  font-family: Georgia, serif;     /* heading font */
-  color: darkblue;
-  border-bottom: 2px solid #444;   /* underline effect */
-  padding-bottom: 5px;
+
+h1, h2 /* testing two in 1 styling for both headings */
+{
+  font-family: Georgia, serif;     /* default styling for heading font */
+  color: rgb(18, 18, 74);
+  border-bottom: 2px solid #090909;   
+  padding-bottom: 15px;
 }
 
-/* Paragraphs */
-p {
+
+p 
+{
   line-height: 1.5;
   margin-bottom: 15px;
 }
 
-/* Links */
-a {
-  color: #cc0000;
+
+a /*hover styling for links */
+{
+  color: #0ed70e; /* default styling for links */
   text-decoration: none;
 }
-a:hover {
-  color: #ff6600;
+
+a:hover /*hover styling for links */
+{
+  color: #0831a4; /* default hover styling for links */
   text-decoration: underline;
 }
 
-/* Code block styling */
-code {
+
+code /* this was interesting to read the section in html. Balancing both HTML and CSS proves to be a referencing challenge for me */
+{
   display: block;
   background-color: #eee;
   border: 1px solid #ccc;
-  border-radius: 5px;    /* rounded edges */
+  border-radius: 5px;    /* use of border and border radius as per requirements */
   padding: 8px;
   margin: 10px 0;
 }
 
-/* Lists */
-ul {
-  padding-left: 20px;
-  margin-bottom: 20px;
-}
-li {
-  margin: 5px 0;
+ul 
+{
+  padding-left: 25px;
+  margin-bottom: 25px;
 }
 
-/* Footer sections */
-footer {
+li {
+  margin: 10px 0;
+}
+
+
+
+footer 
+{
   margin-top: 30px;
   padding: 15px;
   background-color: #ddd;
   border-radius: 8px;
 }
 
-/* Author aside */
+
 #author {
   border: 1px solid #aaa;
   border-radius: 6px;
@@ -67,7 +94,7 @@ footer {
   background-color: #fafafa;
 }
 
-/* Newsletter form */
+
 form {
   margin-top: 10px;
   padding: 10px;
@@ -75,26 +102,33 @@ form {
   border-radius: 6px;
   background-color: #fff;
 }
+
 label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-input[type="email"] {
+
+input[type="email"] /* Styling for the email input field. Googled the 'type' feature */
+{
   width: 90%;
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #666;
   border-radius: 4px;
 }
-button {
+
+button 
+{
   background-color: darkblue;
   color: white;
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: pointer; /* This was fun to play with */
 }
-button:hover {
+
+button:hover 
+{
   background-color: navy;
 }
