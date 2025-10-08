@@ -1,0 +1,102 @@
+* { box-sizing: border-box; } /* Ensures padding and border are included in element's total width and height */
+:root{ /* CSS Variables for consistent theming */
+  --ink:#40342a;
+  --muted:#7a6c5b;
+  --accent:#c97a40;
+  --bg:#fdf8f3;
+  --card:#ffffff;
+  --line:#e7dfd8;
+}
+body{ /* Global body styles */
+  margin:0;
+  font-family:'Poppins', Arial, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.7;
+}
+.container{ /* Central container for layout */
+  width:min(100%,1100px);
+  margin:0 auto;
+  padding:0 16px;
+}
+.site-header{ /* Header styles */
+  background:var(--card);
+  border-bottom:1px solid var(--line);
+  padding:12px 0;
+}
+.header-inner{ /* Flexbox for header layout */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{ /* Logo styling */
+  height:42px;
+  width:auto;
+}
+.menu{ /* Navigation menu styles */
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:20px;
+}
+.menu a{ /* Menu link styles */
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:500;
+}
+.menu a:hover{ /* Hover effect for menu links */
+  color:var(--accent);
+}
+main.container{ /* Main content area */
+  display:flex;
+  flex-direction:column;
+  gap:32px;
+  padding:32px 16px;
+}
+.post{ /* Blog post styles */
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:32px;
+}
+.sidebar{ /* Sidebar styles */
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:20px;
+}
+@media(min-width:820px){ /* Responsive layout for larger screens */
+  main.container{flex-direction:row;align-items:flex-start;}
+  .post{flex:2 1 66%;}
+  .sidebar{flex:1 1 30%;position:sticky;top:16px;}
+}
+
+h1{font-size:30px;margin-top:0;color:var(--ink);} /* Heading styles */
+.h4, h2{font-size:22px;color:var(--ink);margin-bottom:8px;}
+.byline{color:var(--muted);margin-bottom:20px;}
+a{color:var(--accent);text-decoration:none;} 
+
+/*All the below are new additions that I am testing to see how they contrast with the basic css formatting. I need more practice because it is time consuming. VS Code's in-built 'Fix and Explain' features were used here to assist with potential styling options.*/
+a:hover{text-decoration:underline;}
+.feature{margin:20px 0;}
+.feature img{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line);}
+.feature caption{font-size:14px;color:var(--muted);margin-top:6px;}
+.author-card{display:flex;gap:14px;align-items:center;background:#fffaf7;border:1px solid var(--line);border-radius:10px;padding:16px;margin:24px 0;}
+.author-photo{width:80px;height:80px;border-radius:50%;object-fit:cover;border:1px solid var(--line);}
+.metrics-grid .grid{display:flex;flex-wrap:wrap;gap:12px;}
+.metric{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;flex:1 1 180px;}
+.comment-form .form-row{display:flex;gap:12px;flex-wrap:wrap;}
+.form-field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;flex:1 1 240px;}
+input[type="text"],input[type="email"],textarea{padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;}
+button{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:10px 16px;cursor:pointer;}
+button:hover{opacity:0.9;}
+.check{font-size:14px;color:var(--muted);}
+.form-actions{display:flex;justify-content:space-between;align-items:center;margin-top:10px;}
+.widget + .widget{margin-top:20px;}
+.widget a{color:var(--accent);text-decoration:none;}
+.widget a:hover{text-decoration:underline;}
+.site-footer{border-top:1px solid var(--line);text-align:center;padding:16px 0;color:var(--muted);}
+.site-footer a{color:var(--accent);}
+
+
