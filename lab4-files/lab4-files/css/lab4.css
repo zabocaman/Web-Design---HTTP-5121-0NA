@@ -1,0 +1,84 @@
+#flex-1, #flex-2 
+{
+  margin: 1em 0;
+  background-color: purple;
+}
+
+.item 
+{
+  background-color: yellow;
+  padding: 30px;
+}
+
+/* FLEX 1 */
+#flex-1 
+{
+  max-width: 500px; /* make this no wider than 500px */
+  height: 300px;
+
+  /* This is a flex container. What needs to be set? */
+  
+  display: flex;                 /* define display as flex container */
+  flex-direction: row;           /* puts them in a row answering Flex1 #1*/
+  justify-content: space-around; /* even spaces - spaced out */
+  align-items: flex-end;         /* bottom alignment for display answering Flex 1 #2*/
+}
+
+/* flex stuff for the even items in #flex-1 here */
+
+#flex-1 .item:nth-child(even) 
+{
+  align-self: center; /* the even numbers are vertically centered answeing Flex 1 #3*/
+}
+
+
+
+
+/* FLEX 2 */
+#flex-2 
+{
+  padding: 1em;
+
+  /* This is a flex container. */
+  /* Set needed flex container properties here. */
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;  
+  gap: 1.5em;        /* 1.5em gaps between items - flex2 part 2c */
+}
+
+.triple, .single { 
+  padding: 1em; /* padding inside the yellow boxes - flex2 part 2b? */
+  background-color: yellow;
+}
+
+.triple {
+  /* This is a flex item. */
+  flex-basis: 0; /* base size ignored for single width*/
+  flex-grow: 3;  /* 3x wider answering flex2 part 2A */
+}
+
+.single {
+  /* This is a flex item. */
+  flex-basis: 0;
+  flex-grow: 1;  /* 1x width */
+}
+
+#nested-flex {
+  background-color: #bfa0bf;
+  padding: 1em;
+
+  /* This is a flex container. */
+  display: flex;
+  flex-wrap: wrap; /* allows cards to break to new line aka Flex 2 part 3b*/
+  gap: 10px;       /* 10px gaps between orange cards aka Flex 3 part 3c*/
+}
+
+.card {
+  background-color: orange;
+  height: 150px;
+
+  /* This is a flex item. */
+  flex: 0 0 100px; /* Cards have a default width of 100px (which flex item property--not width--to set the target width?) Flex 3 part 3a */
+}
